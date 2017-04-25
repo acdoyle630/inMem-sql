@@ -7,29 +7,19 @@ DROP TABLE IF EXISTS todo;
     employerId VARCHAR (20) NOT NULL
     );
 
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Alice', 12, 'f', 'st');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Bob', 21, 'm', 'dv');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Claire', 56, 'f', 'dv');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'David', 9, 'm', 'na');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Eric', 61, 'm', 'dv');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Fred', 45, 'm', 'dv');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'George', 38, 'm', 'dv');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Hannah', 15, 'f', 'na');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Ilona', 17, 'f', 'st');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Jake', 27, 'm', 'dv');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Kathy', 8, 'f', 'na');
-
-INSERT INTO todo (id, name, age, gender, employerId) VALUES (DEFAULT, 'Liam', 20, 'm', 'st');
+INSERT INTO todo (id, name, age, gender, employerId) VALUES
+  (DEFAULT, 'Alice', 12, 'f', 'st'),
+  (DEFAULT, 'Bob', 21, 'm', 'dv'),
+  (DEFAULT, 'Claire', 56, 'f', 'dv'),
+  (DEFAULT, 'David', 9, 'm', 'na'),
+  (DEFAULT, 'Eric', 61, 'm', 'dv'),
+  (DEFAULT, 'Fred', 45, 'm', 'dv'),
+  (DEFAULT, 'George', 38, 'm', 'dv'),
+  (DEFAULT, 'Hannah', 15, 'f', 'na'),
+  (DEFAULT, 'Ilona', 17, 'f', 'st'),
+  (DEFAULT, 'Jake', 27, 'm', 'dv'),
+  (DEFAULT, 'Kathy', 8, 'f', 'na'),
+  (DEFAULT, 'Liam', 20, 'm', 'st');
 
 DROP TABLE IF EXISTS employer;
 CREATE TABLE IF NOT EXISTS employer(
@@ -39,25 +29,20 @@ CREATE TABLE IF NOT EXISTS employer(
 );
 
 INSERT INTO employer
-(abv, str) VALUES ('dv','DevLeague');
-
-INSERT INTO employer
-(abv, str) VALUES ('st', 'Student');
-
-INSERT INTO employer
-(abv, str) VALUES ('na', 'N/A');
-
+(abv, str) VALUES
+('dv','DevLeague'),
+('st', 'Student'),
+('na', 'N/A');
 
 SELECT *
-FROM todo;
+  FROM todo;
 
 SELECT *
-FROM employer;
-
+  FROM employer;
 
 SELECT *
-FROM todo
-WHERE id = 2;
+  FROM todo
+  WHERE id = 2;
 
 SELECT min(age)
   FROM todo;
